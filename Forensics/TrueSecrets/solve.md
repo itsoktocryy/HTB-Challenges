@@ -2,7 +2,7 @@
 
 ### Our cybercrime unit has been investigating a well-known APT group for several months. The group has been responsible for several high-profile attacks on corporate organizations. However, what is interesting about that case, is that they have developed a custom command & control server of their own. Fortunately, our unit was able to raid the home of the leader of the APT group and take a memory capture of his computer while it was still powered on. Analyze the capture to try to find the source code of the server.
 
-#### We are give a memory dump to analyse. I will use volatility2 to do so.
+#### We're give a memory dump to analyse. I will use volatility2 to do so.
 
 #### We need to determine what profile to use:
 ![Screenshot 2023-04-04 at 18 12 12](https://user-images.githubusercontent.com/73375576/229853520-2a211268-56f8-4149-bd56-813be22984f4.png)
