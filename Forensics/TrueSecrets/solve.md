@@ -22,8 +22,8 @@
 ![Screenshot 2023-04-04 at 18 54 36](https://user-images.githubusercontent.com/73375576/229862982-9bb98e0c-8c70-438b-b204-5179b7a2a959.png)
 #### Let's grab that with:
 #### - $ python2 vol.py -f TrueSecrets.raw --profile=Win7SP1x86_23418 dumpfiles -Q 0x000000000bbf6158 --dump-dir dump
-#### - cd dump && touch backup_development.zip
-#### - mv *.dat backup_development.zip
+#### - $ cd dump && touch backup_development.zip
+#### - $ mv *.dat backup_development.zip
 #### - unzip it and we get the development.tc file
 
 #### To inspect it we need to mount the disk file on a container, use the password we recovered earlier.
