@@ -18,4 +18,12 @@
 #### Don't forget to kill all related processes.
 ![7](https://user-images.githubusercontent.com/73375576/230378785-6917dc8a-f587-4869-afad-6fbc62ce0057.png)
 
-TO BE CONTINUED... (machine crashed)
+
+#### Let's check cron jobs running on the machine.
+![8](https://user-images.githubusercontent.com/73375576/230389490-0239edac-6cfb-4d90-8963-3b84d6894407.png)
+#### We see that this cronjob uses the $ dig command which is well known to be used for DNS query records. This is definately sus. Remove it by typing $ crontab -l and removing that entry.
+#### Running crontab -l as root doesn't show any jobs but that doens't mean there are none. Navigating to /etc and looking throught various cron folders there were a few that didnt match being there on a linux distro
+![10](https://user-images.githubusercontent.com/73375576/230393925-69a267a2-cc8a-4e28-a3eb-960b563d1044.png)
+#### Let's dig into access-up and pyssh:
+#### In access-up cron job we see a chmod 4755 which is a huge red flag because that means we’re giving this binary SetUID permission… aka root permission!. So if an attacker, was to execute the random binary we generated it would actually spawn an instance of /bin/bash owned by the user root. DELETE the file now !
+![11](https://user-images.githubusercontent.com/73375576/230397614-c618cc79-e005-44ab-8193-405e1edbcd47.png)
