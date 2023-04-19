@@ -30,7 +30,7 @@
 <img width="1043" alt="Screenshot 2023-04-18 at 13 32 00" src="https://user-images.githubusercontent.com/73375576/232752417-978805b4-04f3-4079-8475-4c64100a79ed.png">
 
 #### Okay so we know what to look for, it's a reflective DLL injection.
-#### • A DDL injection is a technique used for running code within the address space of another process by forcing it to load a dynamic-link library.
+#### • A DLL injection is a technique used for running code within the address space of another process by forcing it to load a dynamic-link library.
 #### • A reflective DLL injection is a technique that allows an attacker to inject a DLL's into a victim process from memory rather than disk.
 
 #### I used vaddump plugin to dump again the memory process of "powershell.exe". And this works more nicely because we're dumping virtual pages, using this plugin reduces a lot cleanup work.
